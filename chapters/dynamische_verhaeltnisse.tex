@@ -1,0 +1,49 @@
+\section{Titel titel}
+
+Der Begriff dynamische Umgebung bezeichnet eine Situation, \marg{beliebige Bewegungen}
+in der das Messsystem beliebigen Bewegungen ausgesetzt ist. Dies ist auf einem Schiff der Fall \cite{comprehensiveMass}. Natörlich werden einige Bewegungsrichtungen störker auftreten als andere. Ein grosses Schiff wird z.B. viel störker um die x-Achse rotieren (Rollen, roll) als um die z-Achse (Gieren, yaw).
+
+Alle \marg{tiefe Frequenzen}
+folgenden Betrachtungen beziehen sich auf Bewegungen im Frequenzbereich <10Hz. Auf einem Schiff treten natörlich auch höherfrequente Störungen auf, z.B. Vibrationen des Antriebs. Solche Störungen können aber durch Tiefpass-Filterung bei akzeptabler Zeitverzögerung beseitigt werden.
+
+Wird das Schiff als starrer Körper modelliert, \marg{sechs Freiheitsgrade}
+hat die Bewegung im Allgemeinen sechs Freiheitsgrade. Einerseits Translation in den drei Raumdimensionen $s_x, s_y, s_z$, andererseits Drehung oder Rotation um drei unabhöngige Drehachsen $\varphi_x, \varphi_y, \varphi_z$.
+
+För alle folgenden Betrachtungen wird das Messsystem als starrer \marg{starrer Körper}
+Körper modelliert. För die Kompensation ist es wichtig, dass die Waagen relativ zu einander feste Positionen haben. Im relevanten Frequenzbereich (<1Hz) ist das Gestell annöhernd ein starrer Körper. Höherfrequente Störeinflösse werden von den Waagen durch ein Tiefpass-Filter unterdröckt. 
+\begin{figure}[htb]
+	\centering	   \includegraphics[width=0.5\textwidth]{./pictures/bild}
+	\caption{Koordinatensystem auf Schiff}
+	\label{fig:koordinatensys_freiheitsgrade}
+\end{figure}
+
+\subsection{Beschleunigung durch Translation}
+
+Die Translationsbeschleunigung ist als zweite zeitliche Ableitung des Weges definiert:
+\begin{equation*}
+a = \ddot{s}
+\end{equation*}
+Das System kann beliebige Bewegungen in drei \marg{gleiche Beschleunigungen}
+Dimensionen ausföhren. Weil es als starrer Körper angenommen wird, sind alle Translationen $s_x, s_y, s,z$ und somit auch Translationsbeschleunigungen $a_{xT}, a_{yT}, a_{zT}$ im ganzen System gleich. Das heisst, alle Waagen erfahren die gleichen Beschleunigungen durch Translationen des Gesam\-mtsystems.
+
+\subsection{Beschleunigung durch Rotation}
+
+\subsubsection{Winkelbeschleunigungen}
+Auch Rotationen kann das System in beliebige Richtungen ausföhren. Dies föhrt einerseits zu Winkelbeschleunigungen, andererseits ergeben sich weitere Komponenten der Translationsbeschleunigung. Die Winkelbeschleunigung ist die zweite zeitliche Ableitung des Winkels:
+\begin{equation*}
+\alpha = \ddot{\varphi}
+\end{equation*}
+Weil das System ein starrer Körper ist, sind auch die \marg{$\alpha$ öberall gleich}
+Winkelbeschleunigungen im ganzen System gleich. Das heisst: Auf alle Waagen wirken die exakt gleichen Winkelbeschleunigungen. 
+
+\subsubsection{Radial- und Tangentialbeschleunigungen}
+Rotationen föhren in vom System-Schwerpunkt entfernten \marg{Radial\-beschleunigung}
+Punkten zu weiteren Beschleunigungen: Radial- und Tangentialbeschleunigung. Die Radialbeschleunigung $a_r$ wirkt senkrecht zur momentanen Bahngeschwindigkeit. Sie wirkt also in Richtung des Ortsvektors $\vec{r}$. Der Betrag der Radialbeschleunig ist:
+\begin{equation*}
+a_r = \dot{\varphi}^2 r = \omega^2 r
+\end{equation*}
+Die Tangentialbeschleunigung  wirkt in Richtung \marg{Tangential\-beschleunigung}
+der momentanen Bahngeschwindigkeit eines Objektes. Der Betrag ist:
+\begin{equation*}
+a_t = \ddot{\varphi} r = \alpha r
+\end{equation*}

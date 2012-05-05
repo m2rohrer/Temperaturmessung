@@ -1,0 +1,77 @@
+
+\section{Formelzeichen}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+\label{tab:formelzeichen}
+\begin{tabular}{l p{9cm} l}
+\textbf{Zeichen} & \textbf{Bedeutung} & \textbf{Einheit}  \\ 
+  $s_{x, y, z}$ & Momentanpositon in den Raumkoordinaten x, y, z & $	\mathrm{m}$ \\ 
+  $a_{x, y, z}$ & $a = \ddot{s}$, Beschleunigung in die Richtungen x, y, z & $ 	\mathrm{\frac{m}{s^2}}$ \\ 
+  $\varphi_{x, y, z}$ & Momentan-Winkel, \newline Drehung um x(Roll), y(Pitch), z(Yaw) & $	\mathrm{rad}$ \\ 
+  $\omega_{x, y, z}$ & $\omega =  \dot{\varphi}$, Momentan-Winkelgeschwindigkeit um x, y, z & $	\mathrm{\frac{rad}{s}}$ \\ 
+  $\alpha_{x, y, z}$ & $\alpha = \ddot{\varphi}$, Rotationsbeschleunigung um x, y, z & $	\mathrm{\frac{rad}{s^2}}$ \\ 
+  $F$ & Kraft & $	\mathrm{N}$ \\ 
+  $g$ & Erdbeschleunigung ($g \approx 9.81 \mathrm{\frac{m}{s^2}}$) & $	\mathrm{\frac{m}{s^2}}$ \\ 
+  $F_G$ & $F_G = m g$, Gewichtskraft & $	\mathrm{N}$ \\ 
+  $m_T$ & Totmasse (siehe \ref{sec:definitionen})& $	\mathrm{kg}$ \\
+\end{tabular}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+\section{Abkürzungen}
+\begin{acronym}[FACT] %opt. Argument sollte lüngste Abk. sein
+ \acro{DLS}{Dynamic Load Sensor}
+ \acro{DMS}{Dehnungs-Messstreifen}
+ \acro{FIR}{Finite Impulse Response}
+ \acro{TP}{Tiefpass}
+ \acro{SICS}{Standard Interface Command Set}
+\end{acronym}
+
+\vfill %damit Abkürzungen nicht verrissen werden debug
+
+\section{Definitionen}
+\label{sec:definitionen}
+
+\begin{description}
+     \item[Wügegut] 
+       Gemüss \cite{waegelexikon}: \emph{Bezeichnung für den zu wügenden Gegenstand.}
+       
+     \item[Kombinierter Schwerpunkt] 
+       (auch: Gesamt\-schwer\-punkt) Koordi\-naten des\\ Schwerpunktes eines zusammen\-gesetzten Kürpers. Er berechnet sich als gewichtete Summe der Schwerpunkte der Teilkürper \cite{kuchling}.
+              
+     \item[Messgewicht]
+       Bekanntes Gewicht, das für eine Messung auf die Waage gelegt wurde. 
+                     
+     \item[Mittelwert]
+       Arithmetischer Mittelwert einer Reihe gemüss:
+     \begin{equation*}
+		 \overline{x} = mean(x) = \frac{1}{N} \sum_{i=1}^N x_i \quad i\in[1,N]
+		 \end{equation*}
+		 
+		 \item[Sample-Standardabweichung]
+		   Standard\-abweichung einer Messreihe, berechnet mit dem erwartungs\-treuen Schützer      \cite{mueller}:
+		 \begin{equation*}
+		 s = std(x) = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i-\bar{x})^2}\quad i\in[1,N]
+		 \end{equation*}
+		 
+		 \item[RMS, Root Mean Square]
+		   (auch: Effektivwert)
+		 \begin{equation*}
+		 x_{RMS} = RMS(x) = \sqrt{\overline{x}^2 + s^2}
+		 \end{equation*}
+		 Der RMS des Fehlers $RMS(\widehat m - m)$ wird als Vergleichsmass für Kom\-pen\-sations-Methoden verwendet.
+		 
+		 \item[Justierung]
+		  Der Begriff Justierung wird in dieser Arbeit als Synonym zu "`Justierung der Empfindlichkeit"' verwendet. Also gemüss \cite{waegelexikon}: \emph{Das Einstellen der Empfindlichkeit einer Waage mit Hilfe eines Referenzgewichtes.}
+		 
+		 \item[Wiederholbarkeit]
+		 Gemüss \cite{waegelexikon}: \emph{Die Fühigkeit einer Waage, bei mehreren Wügungen des selben Objektes übereinstimmende Messwerte anzuzeigen. Dabei muss die Messreihe unter exakt den selben Bedingungen durchgeführt werden. Die Standardabweichung dieser Messreihe ist ein geeignetes Mass, um den Wert der Wiederholbarkeit anzugeben.}
+		 
+		\item[Empfindlichkeit]
+		Gemüss \cite{waegelexikon}: \emph{ünderung der Ausgangsgrüsse dividiert durch die ünderung der zugehürigen Eingangsgrüsse: $S = \frac{\Delta W}{\Delta m}$. $S$ ist einheitenlos mit dem korrekten Wert 1. Eine Empfindlichkeits-Abweichung führt zu Messabweichungen, welche zum Messgewicht proportional sind.}
+		
+		\item[Linearitüt]
+		Gemüss \cite{waegelexikon}: \emph{Eigenschaft einer Waage, den linearen Zusammenhang zwischen der aufgelegten Last $m$ und dem angezeigten Wügewert $W$ zu folgen.}
+		
+\end{description}

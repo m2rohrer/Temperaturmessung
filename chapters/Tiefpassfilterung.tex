@@ -1,0 +1,56 @@
+\section{EPS-Grafiken}
+\label{sec:epsgrafiken}
+
+EPS-Grafiken (ein Vektorgrafik-Format) werden mit dem epstopdf-Paket automatisch in PDFs umgewandelt, siehe Abb. \ref{fig:yyy}
+
+In \marg{ipsum dolor} 
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+
+Leider \marg{zu tiefe Frequenzen}
+dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kaLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et \ref{tab:xxx} accusam et justo duo dolores sd gubergren, no sea  ). Wie in Abb. \ref{fig:yyy} 
+\begin{table}[htb]
+	\centering
+  \caption{TP-Filter Schiff}
+	\label{tab:xxx}
+	\begin{tabular}{l l}
+    \toprule
+    Design & Kaiser-Fenster Typ I \\
+    \midrule
+    $\beta$ & 5.65 \\
+    $F_s$ & 91.55Hz \\
+    $F_{pass}$ & 0.0001Hz \\
+    $F_{stop}$ & 0.05Hz \\ 
+    $A_{stop}$ & 60dB \\
+    N & 6652 \\		
+    \bottomrule
+    \end{tabular}
+\end{table}
+\begin{figure}[htb]%
+	\centering
+	\includegraphics[width=0.8\textwidth]{pictures/tp_schiff}%
+  \caption{ Schrittantwort von TP-Filter}%
+	\label{fig:yyy}%
+\end{figure}
+
+\pagebreak
+Ein \marg{sadfsdaf sdf}
+dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kaLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores sd gubergren, no sea.
+
+\section{Listings}
+Listing \ref{lst:messdaten} benutzt das Listing-Package
+
+\begin{lstlisting}[caption=Ausschnitt aus Messung, label=lst:messdaten]
+prozedur bubbleSort( A : Liste sortierbarer Elemente ) 
+  n := Luenge( A )
+  wiederhole
+    vertauscht := falsch
+    fuer jedes i von 1 bis n - 1 wiederhole 
+      falls A[ i ] > A[ i + 1 ] dann
+        vertausche( A[ i ], A[ i + 1 ] )
+        vertauscht := wahr
+      ende falls
+    ende fuer
+    n := n - 1
+  solange vertauscht und n >= 1
+prozedur ende
+\end{lstlisting}
