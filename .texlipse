@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Sat May 05 15:43:41 CEST 2012
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=
+mainTexFile=Temperaturmessung.tex
+outputFile=Temperaturmessung.pdf
+langSpell=
+markDer=true
+srcDir=
