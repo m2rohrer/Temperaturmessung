@@ -1,0 +1,20 @@
+\chapter{Blockschema}
+
+\section{Blockschema}
+\centering
+\begin{tikzpicture}
+[mybox/.style={rectangle,rounded corners=1mm,minimum
+size=6mm,anchor=base,very thick,draw=black!50,top color=white,bottom
+color=black!20},mylabel/.style={fill=black!10,font=\small,text
+width=25mm},>=stealth]
+ \node[mybox](first){Spannungsstabilisierung}; 
+ \node[mybox](sec)[below =of first]{Konstantstromquelle}; 
+\node[mybox](third)[below = of sec]{PT1000}; 
+\node[mybox](fourth)[below = of third]{Spannungsverstärkung}; 
+\node[mybox](five)[below = of fourth]{14-Bit A/D Wandler};
+  \draw[->](first) --(sec);
+  \draw[->](sec)--(third);
+  \draw[->](third)--(fourth);
+  \draw[->](fourth)--(five);
+\end{tikzpicture}
+

@@ -1,0 +1,60 @@
+\chapter{Konzept}
+
+\section{Blockschema}
+
+\begin{tikzpicture}
+[mybox/.style={rectangle,rounded corners=1mm,minimum
+size=6mm,anchor=base,very thick,draw=black!50,top color=white,bottom
+color=black!20},mylabel/.style={fill=black!10,font=\small,text
+width=25mm},>=stealth]
+
+ \node[mybox](first){Konstantstromquelle}; 
+ \node[mybox](sec)[below =of first]{PT1000 oder Präzesionswiderstand für
+ Ablgeich}; 
+ \node[mybox](third)[below = of sec]{Spannunngsmessung mit
+ 4-Leiter-Messung};
+ \node[mybox](fourth)[below = of third]{Impendanzwandler}; 
+ \node[mybox](fourth1)[below = of fourth]{Offsetspannungskompensation}; 
+  \node[mybox](fourth2)[below = of fourth1]{Spannungsverstärkung}; 
+\node[mybox](five)[below = of fourth2]{18-Bit A/D Wandler};
+  \draw[->](first) --(sec);
+  \draw[->](sec)--(third);
+  \draw[->](third)--(fourth);
+  \draw[->](fourth)--(fourth1);
+  \draw[->](fourth1)--(fourth2);
+ \draw[->](fourth2)--(five);
+\end{tikzpicture}
+
+
+
+
+\section{Konstantstromquelle}
+Mit Hilfe der Konstantstromquelle wird ein konstanter Strom von 0,1 mA durch den
+PT1000 gelassen, um dann mit Hilfe einer 4-Leiter-Messung die Spannung über dem Sensor
+zu messen.
+
+\section{PT1000}
+Zum Messen der Temperatur wir ein PT1000 verwendet.Platinsensoren sind
+hervorragend für die Temperaturmesstechnik geeignet. Alle PT1000-Sensoren haben
+1000 Ohm Innenwiderstand. Dieser Wert gilt bei 0°C. Der Temperaturkoeffizient der Sensoren ist einheitlich 3850 ppm/K. 
+
+\section{Impendanzwandler}
+Damit die nachfolgende Schaltung keinen Einfluss auf das Messsignal nehmen kann,
+wird das Messsignal über eine Impedanzwanlerschaltung mit einem
+Operationsverstärker abgekoppelt.
+
+\section{Offsetspannungskompensation}
+Da man  den exakten Wert des Stromes berechen will, muss die gemessene Spannung
+genau sein und darf keinen Offset des OP's enthalten.
+
+\section{Spannungsverstärkung}
+Bei -20°C erhält man eine Spannung von 84,6 mV und bei 80 °C  130,8 mV
+eine Spannung von 84.6 mV und
+
+\section{18-Bit A/D Wandler}
+
+Eigentlich würde ein 14-Bit A/D Wandler reichen. Nur haben wir auf dem Markt nur
+18 -Bit Wandler gefunden. Wir haben einen mit der Schnittstelle i2C Bus
+genommen.
+
+
